@@ -1,0 +1,41 @@
+//For each test case, you program must print a single line of the form:
+//XX v
+//where XX is either AP or GP depending if the given progression is an Arithmetic or Geometric Progression. v is the next member of the given sequence. All input cases are guaranteed to be either an arithmetic or geometric progressions.
+
+Input:
+4 7 10
+2 6 18
+0 0 0
+
+Output:
+AP 13
+GP 54
+
+import java.util.*;
+import java.lang.*;
+
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	Scanner in=new Scanner(System.in);
+        int a=in.nextInt();
+        int b=in.nextInt();
+        int c=in.nextInt();
+
+        while(a!=0 || b!=0 || c!=0){
+            if((Math.abs(c-b))==(Math.abs(b-a))){
+                System.out.print("AP" + " " + (c+(c-b)));
+                System.out.println();
+            }
+            else if((Math.abs(c/b))==(Math.abs(b/a))){
+                System.out.print("GP" + " " + c*(c/b));
+                System.out.println();
+            }
+
+            a=in.nextInt();
+            b=in.nextInt();
+            c=in.nextInt();
+        }
+		}
+	}
