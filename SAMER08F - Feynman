@@ -1,0 +1,37 @@
+//For each test case in the input, your program must print a single line, containing the number of different squares for the corresponding input.
+
+Input:
+2
+1
+8
+0
+
+
+Output:
+5
+1
+204
+
+import java.util.*;
+import java.lang.*;
+
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{ 
+		Scanner in=new Scanner(System.in);
+        int t=in.nextInt();
+        long res=0;
+        while(t!=0)
+        {
+            res=0;
+            while(t>0){
+                res+=(long)Math.pow(t,2);
+                t--;
+            }
+            System.out.println(res);
+            t=in.nextInt();
+        }
+		
+	}
+}
